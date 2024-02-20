@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>isEven or isOdd</title>
+  </head>
+  <body>
+    <script>
+      function isEven(x) {
+        return x % 2 === 0 ? true : false;
+        /*   if (x % 2 === 0) {
+          return true;
+        } else {
+          return false;
+        } */
+      }
+      console.log(isEven(12));
+
+      function isOdd(y) {
+        /*    if (y % 2 !== 0){
+            return true
+        }else{
+            return false;
+        } */
+        return y % 2 !== 0 ? true : false;
+      }
+      console.log(isOdd(8));
+    </script>
+  </body>
+</html>

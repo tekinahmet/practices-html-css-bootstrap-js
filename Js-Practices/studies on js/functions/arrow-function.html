@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Arrow Function</title>
+  </head>
+  <body>
+    <script>
+      //regular function
+      /* const calcArea = function (radius) {
+        return 3.14 * radius ** 2;
+      } */
+
+      //arrow function
+      //no need to write function keyword and parenthesis if there is only one parameter
+      /* const calcArea = radius => {
+        return 3.14 * radius ** 2;
+      }; */
+
+      //write parenthesis if there are more than one parameter
+      const calcArea = (pi, radius, number) => pi * radius ** number;
+
+      const area = calcArea(3.14, 3, 2);
+      console.log("area is : ", area); //area is :  28.26
+    </script>
+  </body>
+</html>

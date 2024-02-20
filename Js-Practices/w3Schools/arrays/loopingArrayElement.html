@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Looping Array Elements</title>
+  </head>
+  <body>
+    <h1>JavaScript Arrays</h1>
+    <h2>Looping an Array</h2>
+
+    <p id="demo1"></p>
+    <p id="demo2"></p>
+    <p id="demo3"></p>
+    <p id="demo4"></p>
+
+    <script>
+      const fruits = ["Banana", "Orange", "Apple", "Mango"];
+
+      //1st way for
+      let fLen = fruits.length;
+
+      let text1 = "<ul>";
+      for (let i = 0; i < fLen; i++) {
+        text1 += "<li>" + fruits[i] + "</li>";
+      }
+      text1 += "</ul>";
+
+      document.getElementById("demo1").innerHTML = text1;
+
+      //2nd way for
+      let text2 = "<ul>";
+      for (let i = 0; i < fruits.length; i++) {
+        text2 += "<li>" + fruits[i] + "</li>";
+      }
+      text2 += "</ul>";
+      document.getElementById("demo2").innerHTML = text2;
+
+      //3rd way function
+      let text3 = "<ul>";
+      fruits.forEach(myFunction);
+      text3 += "</ul>";
+      function myFunction(value) {
+        text3 += "<li>" + value + "</li>";
+      }
+      document.getElementById("demo3").innerHTML = text3;
+
+      //4th way arrow function
+      let text4 = "<ul>";
+      fruits.forEach((value) => {
+           text4 += "<li>" + value + "</li>";
+      });
+      text4 += "</ul>";
+    
+      document.getElementById("demo4").innerHTML = text4;
+    </script>
+  </body>
+</html>

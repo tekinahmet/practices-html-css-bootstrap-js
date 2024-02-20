@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Visual Artist</title>
+    <link rel="stylesheet" href="visual-artist.css" />
+  </head>
+  <body>
+    <div class="container">
+      <div class="left">
+        <img src="profile-picture.jpg" alt="" />
+        <h3 class="name">Jessica Potter</h3>
+        <h5 class="job">Visual Artist</h5>
+
+        <input
+          type="button"
+          class="button"
+          value="Message"
+          onclick="increaseMessage()"
+        />
+        <input
+          type="button"
+          class="button"
+          value="Like"
+          onclick="increaseLikes()"
+        />
+        <input
+          type="button"
+          class="button"
+          value="Follow"
+          onclick="increaseFollowers()"
+        />
+      </div>
+
+      <div class="right">
+        <div>
+          <input type="button" class="btn-right posts" value="0" />
+          <h3 class="post">Posts</h3>
+        </div>
+        <div>
+          <input type="button" class="btn-right likes" value="0" />
+          <h3 class="like">Likes</h3>
+        </div>
+        <div>
+          <input type="button" class="btn-right follower" value="0" />
+          <h3 class="like">Follower</h3>
+        </div>
+      </div>
+    </div>
+
+    <script src="visual-artist.js"></script>
+  </body>
+</html>

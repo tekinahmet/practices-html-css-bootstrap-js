@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Iteration - for in</title>
+  </head>
+  <body>
+    <script>
+      const names = ["Ahmet", "Can", "Mustafa", "Ayşe", "Elif"];
+      const surnames = ["Öztürk", "Yılmaz", "Arı", "Çalı", "Yazı"];
+      const merge = (x, y) => {
+        let fullnames = [];
+        for (let i in x) {
+          fullnames[i] = `${x[i]} ${y[i]}`;
+        }
+        return fullnames;
+      };
+      console.log(merge(names, surnames));
+    </script>
+  </body>
+</html>

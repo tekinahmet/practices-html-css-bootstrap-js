@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Arguments & Parameters</title>
+  </head>
+  <body>
+    <script>
+        //function with parameters
+      const speak = function (name, time) {
+        console.log(`good ${time} ${name}`);
+      };
+      speak("ahmet", "evening"); //good evening ahmet
+      speak(); //good undefined undefined
+
+      //function with default parameters
+      function hello(name = "ahmet", time = "morning") {
+        console.log(`good ${time} ${name}`);
+      }
+      hello(); //good morning ahmet
+
+      //overwrite default parameters
+      hello('kübra', 'afternoon'); //good afternoon kübra
+      //overwrite one of default parameters
+      hello('kübra'); //good morning kübra
+    </script>
+  </body>
+</html>

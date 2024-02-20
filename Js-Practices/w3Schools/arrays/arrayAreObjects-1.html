@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Arrays are Objects</title>
+  </head>
+  <body>
+    <!--  Arrays are a special type of objects. The typeof operator in JavaScript
+    returns "object" for arrays. But, JavaScript arrays are best described as
+    arrays. Arrays use numbers to access its "elements". In this example,
+    person[0] returns John: -->
+
+    <h2>JavaScript Arrays</h2>
+
+    <p>Arrays use numbers to access its elements.</p>
+
+    <p id="demo"></p>
+
+    <script>
+      const person = ["John", "Doe", 46];
+      document.getElementById("demo").innerHTML = person[0];//John
+    </script>
+  </body>
+</html>

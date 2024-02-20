@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+  <body>
+    <h1>JavaScript Arrays</h1>
+    <h2>The copyWithin() Method</h2>
+    <p>
+      copyWithin() copies array elements to another position in an array,
+      overwriting existing values:
+    </p>
+
+    <p id="demo"></p>
+    <p id="demo2"></p>
+    <!-- The copyWithin() method overwrites the existing values. The copyWithin() method does not add items to the array. The copyWithin() method does not change the length of the array. -->
+    <script>
+      //Copy to index 2, all elements from index 0:
+      const fruits = ["Banana", "Orange", "Apple", "Mango"];
+      document.getElementById("demo").innerHTML = fruits.copyWithin(2, 0); //Banana,Orange,Banana,Orange
+
+      //Copy to index 2, the elements from index 0 to 2
+      const fruits2 = ["Banana", "Orange", "Apple", "Mango", "Kiwi", "Papaya"];
+      document.getElementById("demo2").innerHTML = fruits2.copyWithin(2, 0, 2); //Banana,Orange,Banana,Orange,Kiwi,Papaya
+    </script>
+  </body>
+</html>

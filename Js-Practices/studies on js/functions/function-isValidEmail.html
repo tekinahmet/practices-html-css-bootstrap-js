@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>isValidEmail</title>
+  </head>
+  <body>
+    <script>
+      //if statement
+      function isValidEmail(email) {
+        if (email.includes("@")) {
+          return true;
+        } else {
+          return false;
+        }
+      }
+      console.log("first example:" + " " + isValidEmail("itsme@email.com"));
+
+      //ternary
+      function isValidEmail(email) {
+        return email.includes("@") ? true : false;
+      }
+      console.log("second example:" + " " + isValidEmail("itsme@email.com"));
+
+      //&& operator and ternary
+      function isValidEmail(email) {
+        return email.includes("@") && email.includes(".com") ? true : false;
+      }
+      console.log("third example:" + " " + isValidEmail("itsme@email.com"));
+    </script>
+  </body>
+</html>

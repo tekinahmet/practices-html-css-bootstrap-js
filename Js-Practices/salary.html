@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Salary Calculation</title>
+  </head>
+  <body>
+    <h2>Salary Calculation</h2>
+
+    <input type="radio" id="employee" name="salaryType" value="employee" />
+    <label for="employee">Employee</label><br />
+
+    <input type="radio" id="retired" name="salaryType" value="retired" />
+    <label for="retired">Retired</label><br />
+    <br />
+    <input
+      type="number"
+      id="salary"
+      placeholder="Enter salary amount"
+    /><br /><br />
+
+    <button onclick="calculateSalary()">Calculate Salary</button><br /><br />
+
+    <p id="result"></p>
+
+    <script>
+      function calculateSalary() {
+        let salary = Number(document.getElementById("salary").value);
+        let type = document.querySelector(
+          'input[name="salaryType"]:checked'
+        ).value;
+
+        // Calculating salary with ternary operator
+        let result = type === "retired" ? salary * 0.9 : salary;
+
+        document.getElementById("result").innerHTML =
+          "Your salary: $" + result.toFixed(2);
+      }
+    </script>
+  </body>
+</html>

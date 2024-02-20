@@ -1,0 +1,33 @@
+#container {
+  font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande";
+  text-align: center;
+  font-size: 2rem;
+}
+button {
+  font-size: 1.5rem;
+  padding: 10px 15px;
+  border-radius: 15px;
+  border: none;
+  background-color: darkgreen;
+  color: white;
+  cursor: pointer;
+}
+button:hover {
+  background-color: greenyellow;
+  color: rgb(26, 39, 2);
+  font-weight: 500;
+}
+button:active {
+  background-color: black;
+  color: white;
+}
+input {
+  border: none;
+  border-radius: 15px;
+  background-color: crimson;
+  padding: 10px 15px;
+  font-size: 1.5rem;
+  width: 100px;
+  text-align: center;
+  font-weight: bold;
+}

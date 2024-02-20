@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Function Declaration</title>
+  </head>
+  <body>
+    <script>
+      greet();
+      // function declaration => hoisting
+      function greet() {
+        console.log("hello there"); //hello there
+      }
+
+      speak();
+      // function expression => no hoisting
+      const speak = function () {
+        console.log("good morning"); //Cannot access 'speak' before initialization
+      };
+    </script>
+  </body>
+</html>

@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css" />
+    <style>
+      #myBox {
+        background-color: purple;
+        color: white;
+        width: 200px;
+        height: 200px;
+        text-align: center;
+        line-height: 200px;
+        cursor: pointer;
+        font-size: 2rem;
+        border-radius: 25px;
+        padding: 15px;
+      }
+      #myButton {
+        font-size: 3rem;
+        margin-top: 10px;
+        cursor: pointer;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="myBox">Click Me 🖱️</div>
+
+    <button id="myButton">Click Me</button>
+    <script>
+      //eventlistener = to listen for specific events to create interactive wep pages
+      //                  events: click, mouseover, mouseout, mousemove
+      //                  addEventListener(event, function) = to listen for events
+
+      const myBox = document.querySelector("#myBox");
+      const myBUtton = document.getElementById("#myButton");
+
+      /* function changeColor() {
+    event.target.style.backgroundColor = 'tomato';
+    event.target.style.color = "white";
+    event.target.textContent = "OUCH! 🤕";
+}
+
+myBox.addEventListener('click', (event)=>{
+    changeColor();
+}) */
+
+      myBox.addEventListener("click", (event) => {
+        event.target.style.backgroundColor = "tomato";
+        event.target.style.color = "white";
+        event.target.textContent = "OUCH! 🤕";
+      });
+
+      myBox.addEventListener("mouseover", (event) => {
+        event.target.style.backgroundColor = "royalblue";
+        event.target.style.color = "white";
+        event.target.textContent = "Don't do it! 😲";
+      });
+
+      myBox.addEventListener("mouseout", (event) => {
+        event.target.style.backgroundColor = "lightgreen";
+        event.target.style.color = "black";
+        event.target.textContent = "Click Me 🖱️";
+      });
+
+      myButton.addEventListener("click", (event) => {
+        myBox.style.backgroundColor = "tomato";
+        myBox.style.color = "white";
+        myBox.textContent = "OUCH! 🤕";
+      });
+      myButton.addEventListener("mouseover", (event) => {
+        myBox.style.backgroundColor = "royalblue";
+        myBox.style.color = "white";
+        myBox.textContent = "Don't do it! 😲";
+      });
+
+      myButton.addEventListener("mouseout", (event) => {
+        myBox.style.backgroundColor = "lightgreen";
+        myBox.style.color = "black";
+        myBox.textContent = "Click Me 🖱️";
+      });
+    </script>
+  </body>
+</html>

@@ -1,0 +1,394 @@
+/* COMMON */
+
+:root {
+	--color1: rgb(228, 228, 228);
+	--color2: rgb(38, 38, 38);
+}
+
+@font-face {
+	font-family: AudiType-Normal;
+	src: local("AudiType-Normal"),
+		url(../fonts/AudiType-Normal.woff2) format("woff2"),
+		url(../fonts/AudiType-Normal.woff) format("woff"),
+		url(../fonts/AudiType-Normal.ttf) format("ttf");
+	font-weight: 400;
+	font-style: normal;
+}
+
+@font-face {
+	font-family: AudiType-Bold;
+	src: local("AudiType-Bold"),
+		url(../fonts/AudiType-Bold.woff2) format("woff2"),
+		url(../fonts/AudiType-Bold.woff) format("woff"),
+		url(../fonts/AudiType-Bold.ttf) format("ttf");
+	font-weight: 400;
+	font-style: normal;
+}
+
+@font-face {
+	font-family: AudiType-ExtendedNormal;
+	src: local("AudiType-ExtendedNormal"),
+		url(../fonts/AudiType-ExtendedNormal.woff2) format("woff2"),
+		url(../fonts/AudiType-ExtendedNormal.woff) format("woff"),
+		url(../fonts/AudiType-ExtendedNormal.ttf) format("ttf");
+	font-weight: 400;
+	font-style: normal;
+}
+
+@font-face {
+	font-family: AudiType-ExtendedBold;
+	src: local("AudiType-ExtendedBold"),
+		url(../fonts/AudiType-ExtendedBold.woff2) format("woff2"),
+		url(../fonts/AudiType-ExtendedBold.woff) format("woff"),
+		url(../fonts/AudiType-ExtendedBold.ttf) format("ttf");
+	font-weight: 400;
+	font-style: normal;
+}
+@font-face {
+	font-family: AudiType-WideNormal;
+	src: local("AudiType-WideNormal"),
+		url(../fonts/AudiType-WideNormal.woff2) format("woff2"),
+		url(../fonts/AudiType-WideNormal.woff) format("woff"),
+		url(../fonts/AudiType-WideNormal.ttf) format("ttf");
+	font-weight: 400;
+	font-style: normal;
+}
+@font-face {
+	font-family: AudiType-WideBold;
+	src: local("AudiType-WideBold"),
+		url(../fonts/AudiType-WideBold.woff2) format("woff2"),
+		url(../fonts/AudiType-WideBold.woff) format("woff"),
+		url(../fonts/AudiType-WideBold.ttf) format("ttf");
+	font-weight: 400;
+	font-style: normal;
+}
+
+body {
+	font-family: "AudiType-WideNormal";
+}
+
+a {
+	text-decoration: none;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+	font-family: "AudiType-ExtendedNormal";
+}
+
+.button {
+	background: none;
+	padding: 15px 70px;
+	border: 1px solid var(--color2);
+}
+
+.button.light {
+	border: 1px solid var(--color1);
+	color: var(--color1);
+}
+
+.button.bgdark {
+	border: 1px solid var(--color2);
+	color: var(--color1);
+	background-color: var(--color2);
+}
+
+.spec {
+	margin-top: 15px;
+	font-size: 0.7rem;
+}
+
+.spec p {
+	margin-bottom: 5px;
+}
+
+/* NAVBAR */
+
+.main-navbar .offcanvas.offcanvas-top {
+	height: auto;
+}
+
+@media (min-width: 1000px) {
+	.main-navbar .offcanvas.offcanvas-top {
+		height: fit-content;
+	}
+}
+
+.main-navbar .navbar-toggler {
+	border: none;
+	font-size: 1rem;
+	z-index: 1046;
+}
+
+.main-navbar .navbar-toggler:focus {
+	box-shadow: none;
+}
+
+.main-navbar .navbar-brand {
+	z-index: 1046;
+}
+
+.main-navbar .navbar-nav {
+	margin: 30px 20px;
+}
+
+@media (min-width: 1000px) {
+	.main-navbar .navbar-nav {
+		flex-direction: row;
+	}
+}
+
+@media (min-width: 1400px) {
+	.main-navbar .navbar-nav {
+		margin: 0;
+	}
+}
+
+.main-navbar .nav-link {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	border-bottom: 1px solid var(--color1);
+	padding: 20px 0;
+}
+
+@media (min-width: 1000px) {
+	.main-navbar .nav-link {
+		border-bottom: none;
+		padding: 8px;
+	}
+
+	.main-navbar .dropdown-toggle::after {
+		display: none;
+	}
+}
+
+.main-navbar .toolbar {
+	display: flex;
+	align-items: center;
+	gap: 20px;
+	z-index: 1046;
+}
+
+.main-navbar .toolbar ul {
+	list-style-type: none;
+	margin: 0;
+	padding: 0;
+	font-size: 0.8rem;
+}
+
+.main-navbar .toolbar ul li:first-child {
+	opacity: 0.6;
+}
+
+.main-navbar .toolbar button {
+	border: none;
+	background: none;
+	display: flex;
+	align-items: center;
+	gap: 20px;
+}
+
+.main-navbar .toolbar .v-line {
+	width: 1px;
+	height: 30px;
+	background-color: black;
+}
+
+.main-navbar .toolbar img {
+	display: inline-block;
+	object-fit: cover;
+	width: 30px;
+	height: 30px;
+	border-radius: 50%;
+	-webkit-border-radius: 50%;
+	-moz-border-radius: 50%;
+	-ms-border-radius: 50%;
+	-o-border-radius: 50%;
+}
+
+.main-navbar .toolbar .lang {
+	display: flex;
+	align-items: center;
+	gap: 10px;
+}
+
+/* SLIDER */
+.slider {
+	height: 100vh;
+	position: relative;
+}
+
+.slider video {
+	width: 100%;
+	height: 100%;
+	object-fit: cover;
+	filter: brightness(0.3);
+	position: relative;
+	z-index: -1;
+	-webkit-filter: brightness(0.3);
+}
+
+.slider .content {
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	text-align: center;
+	color: var(--color1);
+	transform: translate(-50%, -50%);
+	-webkit-transform: translate(-50%, -50%);
+	-moz-transform: translate(-50%, -50%);
+	-ms-transform: translate(-50%, -50%);
+	-o-transform: translate(-50%, -50%);
+}
+
+/* TOPICS */
+
+.topics {
+	margin-top: 100px;
+	margin-bottom: 100px;
+}
+
+.topics h2 {
+	text-align: center;
+}
+
+.zoom-card {
+	border: none;
+	cursor: pointer;
+}
+
+.zoom-card .image {
+	overflow: hidden;
+}
+
+.zoom-card img {
+	width: 100%;
+	height: auto;
+	object-fit: cover;
+	transition: all 0.5s;
+	-webkit-transition: all 0.5s;
+	-moz-transition: all 0.5s;
+	-ms-transition: all 0.5s;
+	-o-transition: all 0.5s;
+}
+
+.zoom-card:hover img {
+	filter: brightness(0.5);
+	transform: scale(1.2);
+	-webkit-transform: scale(1.2);
+	-moz-transform: scale(1.2);
+	-ms-transform: scale(1.2);
+	-o-transform: scale(1.2);
+	-webkit-filter: brightness(0.5);
+}
+
+/* HIGHLIGHT */
+
+.highlight {
+	margin-top: 100px;
+	margin-bottom: 100px;
+}
+
+.highlight img {
+	width: 100%;
+}
+
+/* PRESS */
+.press h2 {
+	text-align: center;
+}
+
+/* FOOTER */
+footer a {
+	color: var(--color1);
+}
+
+footer .social {
+	list-style: none;
+	margin: 0;
+	padding: 0;
+	font-size: 2rem;
+	display: flex;
+	gap: 40px;
+	justify-content: end;
+	margin-right: 10px;
+}
+
+footer .accordion-item {
+	border-radius: 0 !important;
+	-webkit-border-radius: 0 !important;
+	-moz-border-radius: 0 !important;
+	-ms-border-radius: 0 !important;
+	-o-border-radius: 0 !important;
+}
+
+footer .accordion-button:focus {
+	border: 0;
+	box-shadow: none;
+}
+
+footer .accordion-button:not(.collapsed) {
+	background: none;
+}
+
+footer ul{
+	list-style: none;
+	margin: 0;
+	padding: 0;
+}
+
+@media (min-width: 576px) {
+	footer .accordion-collapse {
+		display: block !important;
+	}
+
+	footer .accordion button {
+		pointer-events: none;
+	}
+
+	footer .accordion-button::after {
+		background-image: none !important;
+	}
+
+	footer .accordion-item{
+		border:0 !important
+	}
+
+	footer .accordion{
+		display: flex !important;
+		justify-content: start;
+		gap: 30px
+	}
+}
+
+footer .copyright{
+	padding: 20px;
+}
+
+
+footer .menu{
+	display: flex;
+	flex-wrap: wrap;
+	gap:10px;
+}
+
+footer .menu li{
+	flex-basis: 200px;
+}
+
+@media(min-width: 576px){
+	footer .menu li{
+		flex-basis: 150px;
+	}
+}
+
+@media(min-width: 1200px){
+	footer .menu li{
+		flex-basis: auto;
+	}
+}

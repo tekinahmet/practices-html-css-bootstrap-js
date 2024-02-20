@@ -1,0 +1,27 @@
+:root {
+  --color1: #868686;
+  --color2: #e7e7e7;
+  --color3: #e95d3c;
+
+}
+.button {
+  background-color: var(--color3);
+  color: white;
+  padding: 6px;
+  border-radius: 5px;
+  text-decoration: none;
+}
+.button:hover{
+  background-color: #c44330;
+  
+}
+footer{
+  background-image: url("../img/ex-machina/solid-painted-concrete-wall-textured-backdrop.jpg");
+}
+.donec{
+  color: var(--color1);
+  text-decoration: none;
+}
+.donec:hover{
+  text-decoration: underline;
+}
